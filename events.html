@@ -1,27 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Events</title>
 </head>
+
 <body>
   <div id="wrapper">
-    <button>Kuch to Hoga</button>
+    <!-- <button>Click Me</button>
+    <button>Click Me Too</button>
+    <button>Mujhe Bhi Click Karo</button>
+    <button>Mujhe Bhi Click Karo 2</button>
+    <button>Mujhe Bhi Click Karo 3</button> -->
+
+    <a href="">Click Me 1</a>
+    <a href="">Click Me 2</a>
+    <a href="">Click Me 3</a>
+    <a href="">Click Me 4</a>
+    <a href="">Click Me 5</a>
+    <a href="">Click Me 6</a>
+
+    <p></p>
+
+
+    <!-- <p></p> -->
   </div>
 
   <script>
 
-    let btn = document.querySelector("button")
+    // let anchor = document.querySelectorAll("button")
 
-    // btn.onclick = console.log("Javascript")
+    // const heading = document.querySelector("p")
 
-    btn.onclick = function(){
-      console.log("Javascript")
+    // heading.innerText = 'This is bold'
+
+    let akash = document.querySelectorAll("a")
+
+    // for (let i = 0; i < 6; i++) {
+    //   akash[i].onclick = function (e) {
+    //     e.preventDefault()
+    //     console.log(e)
+    //     if (i % 2 === 0) {
+    //       console.log("Jethalal");
+    //     }
+    //     else {
+    //       console.log("Babiiita Jiii");
+    //     }
+    //   }
+    // }
+
+    let anchor = document.querySelectorAll("a")
+    let para = document.querySelector("p")
+
+    // Ternary Operator 
+
+    for (let i = 0; i < anchor.length; i++) {
+      anchor[i].onclick = function (e) {
+        e.preventDefault()
+        // if (para.innerHTML === '') 
+        //   para.innerHTML = anchor[i].innerHTML        
+        // else 
+        //   para.innerHTML = ''        
+        para.innerHTML = (para.innerHTML === '') ? anchor[i].innerHTML : ''
+      }
     }
-    //ondblclick, onmouseover, onmouseout, onkeyup, onchange, onfocus, onblur
+
+
+    // let anchor = document.querySelectorAll('a')
+    // let para = document.querySelector('p')
+    // for (let i = 0; i < anchor.length; i++) {
+    //   anchor[i].onclick = function (e) {
+    //     e.preventDefault()
+    //     para.innerHTML = anchor[i].innerHTML
+    //   }
+    // }
+
+    // para.onclick = function(){
+    //   para.innerHTML = ''
+    // }
+
+
+
+
+
+
+
+
+
 
   </script>
 </body>
+
 </html>
