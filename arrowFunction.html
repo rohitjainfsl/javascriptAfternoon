@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrow Functions</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa aut ab aspernatur in, similique quasi. Vitae,
+      officiis excepturi repellendus dolor a est quaerat quibusdam cum delectus, suscipit deserunt odit possimus?
+      Ad sint odio ea. At soluta, cupiditate optio sequi debitis quaerat doloremque assumenda ipsa sint a dolorum rem
+      numquam quod, aliquam asperiores laudantium deserunt excepturi obcaecati saepe! Aspernatur, odit magni.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis harum, quam omnis itaque placeat
+      excepturi quisquam ipsum nesciunt, eveniet sequi voluptatum. Maiores quam animi aspernatur ea rem impedit neque.
+      Cumque quam animi labore omnis, provident, ut iste perspiciatis iusto dicta quia repudiandae tempora quo ipsam
+      aperiam consequatur aspernatur fugit dolor placeat sint illum, optio cum reprehenderit iure. Repellat, provident.
+    </p>
+  </div>
+  <script>
+    let pera = document.querySelectorAll("p")
+    // for( let i=0; i<=pera.length; i++){
+    //   pera[i].onmouseover = function(){
+    //     // pera[i].style.border = "2px solid red"
+    //     // pera[i].style.margin = "1rem"
+    //     // pera[i].style.padding = "1rem"
+    //     // pera[i].style.borderRadius = "0.5rem"
+
+    //     pera[i].style.cssText = 'border: 2px solid red; margin: 1rem; padding: 1rem; border-radius: 0.5rem'
+    //   }
+    //   pera[i].onmouseout = function(){
+    //     // pera[i].style.border = "none"
+    //     // pera[i].style.margin = "0"
+    //     // pera[i].style.padding = "0"
+    //     // pera[i].style.borderRadius = "none"
+    //     pera[i].style.cssText = 'border: none; margin: 0; padding: 0; border-radius: none'
+    //   }
+    // }
+
+
+
+    for (let i = 0; i < pera.length; i++) {
+      pera[i].onmouseover = function () {
+        this.style.cssText = 'border: 2px solid red; margin: 1rem; padding: 1rem; border-radius: 0.5rem'
+      }
+      pera[i].onmouseout = function () {
+        this.style.cssText = 'border: none; margin: 0; padding: 0; border-radius: none'
+      }
+    }
+
+
+    // this is undefined in arrow function
+
+
+
+    for (let i = 0; i < pera.length; i++) {
+      pera[i].onmouseover = () => {
+        this.style.cssText = 'border: 2px solid red; margin: 1rem; padding: 1rem; border-radius: 0.5rem'
+      }
+      pera[i].onmouseout = () => {
+        this.style.cssText = 'border: none; margin: 0; padding: 0; border-radius: none'
+      }
+    }
+
+
+
+
+    // console.log("Apple" + "Banana" + 1 + 2 + "3")
+
+    // console.log(1 + 2 + '3' + "Apple")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
