@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String functions</title>
+</head>
+
+<body>
+    <div id="wrapper">
+    </div>
+    <script>
+        // let str="i will give 8 to javascript"
+        // console.log(str.replace("8","10"))
+        // let jitendra="sachinkumar2108@gmail.com"
+        // let at = jitendra.indexOf("@")
+        // console.log(jitendra.slice(0, at))
+
+
+        let email1 = 'rohit@fullstacklearning.com'
+        let email2 = 'sachinkumar2108@gmail.com'
+        let email3 = 'yash224.yr@netflix.com'
+
+        // let at = email1.lastIndexOf('@')
+        // let dot = email1.lastIndexOf(".")
+        // console.log(email1.slice(at + 1, dot))
+
+        // let att = email2.lastIndexOf('@')
+        // let dott = email2.lastIndexOf('.')
+        // console.log(email2.slice(att + 1, dot))
+
+
+        // function domainExtractor(email) {
+        //     let at = email.lastIndexOf('@')
+        //     let dot = email.lastIndexOf(".")
+        //     console.log(email.slice(at+1, dot))
+        // }
+
+        // domainExtractor(email1)
+        // domainExtractor(email2)
+        // domainExtractor(email3)
+        // domainExtractor('ritiksalujabxn@gmail.com')
+        // domainExtractor('ritiksalujabxn@gmail.com')
+
+
+
+        // function countLettersInName(name){
+        //     //kisi naam me kitne letter h
+        //     //wo count karke console kar do
+        //     let nameArr = name.split('')
+        //     console.log(nameArr.reverse().join(''))
+        // }
+
+        // countLettersInName("Nikky") //ykkiN
+        // countLettersInName("Ramraj") //jarmaR
+        // countLettersInName("Jitendra") //
+        // countLettersInName("Yash") //4
+
+        function doSomething(name) {
+            let vowels = ['a', 'e', 'i', 'o', 'u']
+
+            //count all the vowels in name
+            // split name
+            // use loop to check if each letter is in array
+            // if it is, increment a variable
+            // after loop, print the variable
+
+
+            // let count = 0
+            // let spln = name.split('')
+            // for (let i = 0; i < spln.length; i++) {
+            //     for (let j = 0; j < vowels.length; j++) {
+            //         if (spln[i] === vowels[j]) {
+            //             count = count + 1
+            //         }
+            //     }
+            // }
+
+            let count = 0
+
+            for(let i=0;i<name.length;i++){
+                if(vowels.includes(name[i]))
+                    count++
+            }
+            console.log(count) 
+
+
+
+
+
+            document.write(count)
+            document.write("<br>")
+        }
+
+
+        doSomething("Nikky") //1
+        doSomething("Ramraj") //2
+        doSomething("aeiou") //5
+
+
+
+
+        //push, pop, shift, unshift,
+        //splice, slice, includes, sort (sort with compare function), concat, merge
+
+        //What is Bubble Sort?
+        //What is Selection Sort?
+
+
+    </script>
+</body>
+
+</html>
