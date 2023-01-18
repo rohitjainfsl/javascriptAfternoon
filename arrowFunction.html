@@ -10,19 +10,12 @@
 
 <body>
   <div id="wrapper">
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa aut ab aspernatur in, similique quasi. Vitae,
-      officiis excepturi repellendus dolor a est quaerat quibusdam cum delectus, suscipit deserunt odit possimus?
-      Ad sint odio ea. At soluta, cupiditate optio sequi debitis quaerat doloremque assumenda ipsa sint a dolorum rem
-      numquam quod, aliquam asperiores laudantium deserunt excepturi obcaecati saepe! Aspernatur, odit magni.</p>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis harum, quam omnis itaque placeat
-      excepturi quisquam ipsum nesciunt, eveniet sequi voluptatum. Maiores quam animi aspernatur ea rem impedit neque.
-      Cumque quam animi labore omnis, provident, ut iste perspiciatis iusto dicta quia repudiandae tempora quo ipsam
-      aperiam consequatur aspernatur fugit dolor placeat sint illum, optio cum reprehenderit iure. Repellat, provident.
-    </p>
+    <input type="text" placeholder="Enter a name">
+    <br>
+    <button>Print Consonants</button>
   </div>
   <script>
-    let pera = document.querySelectorAll("p")
+    // let pera = document.querySelectorAll("p")
     // for( let i=0; i<=pera.length; i++){
     //   pera[i].onmouseover = function(){
     //     // pera[i].style.border = "2px solid red"
@@ -43,28 +36,28 @@
 
 
 
-    for (let i = 0; i < pera.length; i++) {
-      pera[i].onmouseover = function () {
-        this.style.cssText = 'border: 2px solid red; margin: 1rem; padding: 1rem; border-radius: 0.5rem'
-      }
-      pera[i].onmouseout = function () {
-        this.style.cssText = 'border: none; margin: 0; padding: 0; border-radius: none'
-      }
-    }
+    // for (let i = 0; i < pera.length; i++) {
+    //   pera[i].onmouseover = function () {
+    //     this.style.cssText = 'border: 2px solid red; margin: 1rem; padding: 1rem; border-radius: 0.5rem'
+    //   }
+    //   pera[i].onmouseout = function () {
+    //     this.style.cssText = 'border: none; margin: 0; padding: 0; border-radius: none'
+    //   }
+    // }
 
 
     // this is undefined in arrow function
 
 
 
-    for (let i = 0; i < pera.length; i++) {
-      pera[i].onmouseover = () => {
-        this.style.cssText = 'border: 2px solid red; margin: 1rem; padding: 1rem; border-radius: 0.5rem'
-      }
-      pera[i].onmouseout = () => {
-        this.style.cssText = 'border: none; margin: 0; padding: 0; border-radius: none'
-      }
-    }
+    // for (let i = 0; i < pera.length; i++) {
+    //   pera[i].onmouseover = () => {
+    //     this.style.cssText = 'border: 2px solid red; margin: 1rem; padding: 1rem; border-radius: 0.5rem'
+    //   }
+    //   pera[i].onmouseout = () => {
+    //     this.style.cssText = 'border: none; margin: 0; padding: 0; border-radius: none'
+    //   }
+    // }
 
 
 
@@ -74,12 +67,59 @@
     // console.log(1 + 2 + '3' + "Apple")
 
 
+    function printConsonants(name) {
+      let vowels = ['a', 'e', 'i', 'o', 'u']
+      let splt = name.toLowerCase().split('')
+      let output = ''
+      for (let i = 0; i < splt.length; i++) {
+        // if (!vowels.includes(name[i]))
+        //   output += name[i]
+        if (vowels.includes(splt[i]))
+          continue;
+        else
+          output += splt[i]
+      }
+      console.log(output)
+    }
+
+    const btn = document.querySelector("button")
+    const input = document.querySelector("input")
+
+    btn.onclick = () => {
+      printConsonants(input.value)
+    }
 
 
 
+    //Find out the largest number from an array, using for loop
+
+    let numbers = [34, 3, 1, 55, 23, 56, 35, 9, 99, 100, -101, -10, -11, 2]
+
+    let largest = numbers[0]
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] > largest)
+        largest = numbers[i]
+    }
+    console.log(largest)
 
 
+    //Arrange in ascending order(smallest to largest)
 
+    let marks = [34, 3, 1, 55, 23, 56, 35, 9, 99, 100, -101, -10, -11, 2]
+
+    // console.log(marks.sort((a,b) => {return a-b}))
+
+    for (let i = 0; i < marks.length; i++) {
+      for (let j = i + 1; j < marks.length; j++){
+        if(marks[i] < marks[j]){
+          //SWAP
+          let temp = marks[i]
+          marks[i] = marks[j]
+          marks[j] = temp
+        }
+      }
+    }
+    console.log(marks)
 
 
 
