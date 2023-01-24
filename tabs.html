@@ -11,7 +11,13 @@
 
 <body>
   <div id="wrapper">
-    <div class="tabs">
+    <input type="text" placeholder="Enter friend's name">
+    <button>Add</button>
+    <button>Print</button>
+    <p></p>
+
+
+    <!-- <div class="tabs">
       <a href="" class="active">HTML</a>
       <a href="">CSS</a>
       <a href="">JS</a>
@@ -21,27 +27,127 @@
     <div class="content">
       <div class="con active" id="html">
         <h2>HTML</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dignissimos odio quos neque laborum iste vero praesentium, quis molestias. Voluptatibus fugit eveniet sed voluptatum totam dicta quia minus voluptas numquam?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dignissimos odio quos neque laborum iste vero
+          praesentium, quis molestias. Voluptatibus fugit eveniet sed voluptatum totam dicta quia minus voluptas
+          numquam?</p>
       </div>
       <div class="con" id="css">
         <h2>CSS</h2>
-        <p>Placeat quae eaque doloribus. Fugiat nisi accusantium voluptatum voluptates nam eos eius est, optio, maiores, error quas modi aperiam alias? Voluptatum aspernatur sit, similique numquam debitis vero corrupti ad est?</p>
+        <p>Placeat quae eaque doloribus. Fugiat nisi accusantium voluptatum voluptates nam eos eius est, optio, maiores,
+          error quas modi aperiam alias? Voluptatum aspernatur sit, similique numquam debitis vero corrupti ad est?</p>
       </div>
       <div class="con" id="js">
         <h2>JS</h2>
-        <p>Nesciunt, repellat. Ipsa, iure distinctio amet voluptatibus eos, veniam veritatis vero obcaecati quibusdam quisquam itaque. Illum fugit ad, dolore consectetur asperiores aperiam recusandae, ab ullam nemo vitae quia harum? At?</p>
+        <p>Nesciunt, repellat. Ipsa, iure distinctio amet voluptatibus eos, veniam veritatis vero obcaecati quibusdam
+          quisquam itaque. Illum fugit ad, dolore consectetur asperiores aperiam recusandae, ab ullam nemo vitae quia
+          harum? At?</p>
       </div>
       <div class="con" id="node">
         <h2>Node</h2>
-        <p>Obcaecati, iste consequuntur eos rerum exercitationem ipsam numquam modi reprehenderit totam, quia velit architecto id ab earum quo. Velit perferendis error veritatis molestiae corrupti? Itaque, consequuntur possimus. Veniam, placeat nulla!</p>
+        <p>Obcaecati, iste consequuntur eos rerum exercitationem ipsam numquam modi reprehenderit totam, quia velit
+          architecto id ab earum quo. Velit perferendis error veritatis molestiae corrupti? Itaque, consequuntur
+          possimus. Veniam, placeat nulla!</p>
       </div>
       <div class="con" id="react">
         <h2>React</h2>
-        <p>Obcaecati, iste consequuntur eos rerum exercitationem ipsam numquam modi reprehenderit totam, quia velit architecto id ab earum quo. Velit perferendis error veritatis molestiae corrupti? Itaque, consequuntur possimus. Veniam, placeat nulla!</p>
+        <p>Obcaecati, iste consequuntur eos rerum exercitationem ipsam numquam modi reprehenderit totam, quia velit
+          architecto id ab earum quo. Velit perferendis error veritatis molestiae corrupti? Itaque, consequuntur
+          possimus. Veniam, placeat nulla!</p>
       </div>
     </div>
 
-  </div>
+  </div> -->
+
+
+    <script>
+
+      //setTimeout, setInterval
+
+      // setInterval(() => {console.log("Ritik")}, 3000)
+      // console.log("Ritik")
+
+
+
+      const add = document.querySelector("button:first-of-type")
+      const printNames = document.querySelector("button:last-of-type")
+      const input = document.querySelector("input")
+      const friends = []
+
+      add.onclick = () => {
+        friends.push(input.value)
+        console.log(friends)
+      }
+
+      
+      // printNames.onclick = () => {
+      //   friends.reverse()
+        
+      //   let i = 0
+      //   let x = setInterval(function () {
+      //     let para = document.querySelector("p")
+          
+      //     if (i === friends.length - 1) {
+      //       para.innerHTML += friends[i].split('').reverse().join('')
+      //       clearInterval(x)
+      //     }          
+      //     else
+      //       para.innerHTML += friends[i].split('').reverse().join('') + ","
+      //     i++
+      //   }, 1000)
+      // }
+
+
+      // var a = 3;
+      // function jsIsfun(a){
+      //   var a = 1;        
+      //   console.log(a)
+      // }
+      // var a = 5;
+      // jsIsfun(100)
+
+
+
+      const obj1 = {foo: 1, bar: 2}
+      const obj2 = {...obj1, bar: 3}
+      console.log(obj2.bar) //3
+
+
+
+
+    // const anchors = document.querySelectorAll("a")
+    // const conDivs = document.querySelectorAll(".con")
+
+
+    // for (let i = 0; i < anchors.length; i++){
+    //   anchors[i].onclick = (e) => {
+    //     e.preventDefault()
+    //     document.querySelector("a.active").classList.remove("active")
+
+    //     anchors[i].classList.add("active")
+
+
+    //     document.querySelector(".con.active").classList.remove("active")
+
+    //     conDivs[i].classList.add("active")
+    //   }
+    // }
+
+
+    // const numbers = [34,54,23,32, 111]
+
+    // numbers.push(numbers.shift())
+    // numbers.push(numbers.shift())
+    // numbers.unshift(numbers.pop())
+
+    // console.log(numbers) 
+
+
+
+    //Object, Object.keys, Object.create, Object.entries
+    //deep copy, shallow copy
+
+
+    </script>
 
 
 </body>

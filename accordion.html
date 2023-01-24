@@ -42,6 +42,41 @@
     </div>
   </div>
 
+  <script>
+    let icons = document.querySelectorAll("i")
+    let para = document.querySelectorAll("p")
+
+    //saare icons par onclick lagega
+    //onclick par function chalega
+    //jis para par active class h waah se hatani h
+    //jis icon par click hua h, uske padosi para par active class lagani h
+
+    for (let i = 0; i < icons.length; i++) {
+      icons[i].onclick = () => {
+        if (icons[i].classList.contains("fa-square-plus")) {
+
+          //para ko open karna h
+          icons[i].parentElement.nextElementSibling.classList.add("active")
+          //icon plus se minus karna h
+          icons[i].classList.remove("fa-square-plus")
+          icons[i].classList.add("fa-square-minus")
+        }
+        else {
+          //para ko band karna h
+          icons[i].parentElement.nextElementSibling.classList.remove("active")
+
+          //icon minus se plus karna h        
+          icons[i].classList.add("fa-square-plus")
+          icons[i].classList.remove("fa-square-minus")
+
+
+        }
+      }
+    }
+
+
+  </script>
+
 </body>
 
 </html>
