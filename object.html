@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
+</head>
+
+<body>
+  <div id="wrapper"></div>
+
+  <script>
+    // let person = ['Jo', 123456789012, 23, 132]
+
+    // Object: is a collection of key & value pairs.
+    // Why object: to define relationship in values, and to store functions that can operate on those values
+
+
+    // let n = [] //array literal
+    // let n = new Array() //Array Constructor
+
+    // let n = {} //object literal
+    // let n = new Object() //Object Constructor
+
+
+    // let obj = {
+    //   name: 'ramraj',
+    //   age: 26,
+    //   hometown: 'jaipur',
+    //   isStudent: true
+    // }
+
+    // console.log(obj)
+
+    // document.write(obj)
+
+
+    // document.write(obj.name) //dot notation
+
+    // document.write(obj["name"]) //array notation
+    // document.write(obj["age"]) //array notation
+    // document.write(obj["hometown"]) //array notation
+    // document.write(obj["isStudent"]) //array notation
+
+
+    // let x = 'age'
+
+    // document.write(obj[x])
+
+
+
+
+    // for( let i in obj){
+    //   document.write(i + "=" + obj[i] + "<br>")
+    // // }
+
+
+
+    //Object.entries
+    //Object.keys
+
+    // console.log(Object.keys(obj))
+    // console.log(Object.entries(obj))
+
+
+    // let person = {
+    //   name: 'Ritik',
+    //   age: 25,
+    //   profession: 'Full Stack Developer',
+    //   organisation: 'FSL'
+    // }
+
+    // let arr = Object.keys(person)
+    //  let arr1 = Object.values(person)
+
+    //  for(let i = arr1.length-1;i>=0;i--){
+    //   document.write(arr[i]+ "=" + arr1[i]+"<br>")
+    //  }
+
+    // for (let i = arr.length - 1; i >= 0; i--){
+    //   document.write(arr[i] + " :: " + person[arr[i]] + "<br>")
+    // }
+
+
+    let person = {
+      name: 'Agam',
+      age: 20,
+      address: {
+        city: 'Jaipur',
+        state: 'Rajasthan'
+      }
+    }
+
+
+
+    // let dusraObj = {
+    //   a: {
+    //     x:1,
+    //     y:2
+    //   },
+    //   b: {
+    //     xx:1,
+    //     yy:2
+    //   }
+    // }
+    //  typeof 
+
+    for (let i in person) {
+      if (typeof person[i] === 'object') {
+        for (let j in person[i]) {
+          document.write(j + " = " + person[i][j] + "<br>")
+        }
+      }
+      else {
+        document.write(i + " = " + person[i] + "<br>")
+      }
+    }
+
+
+
+    //Object.create
+    //Spread Syntax
+    //Destructuring
+    //Objects: Shallow copy, deep copy
+
+
+
+
+
+  </script>
+</body>
+
+</html>

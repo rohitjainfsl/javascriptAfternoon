@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Offset</title>
+  <link rel="stylesheet" href="clickOffset.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="offsetDiv">
+      <div class="heading">
+        <span></span>
+        <button>Clear</button>
+      </div>
+      <div class="canvas">
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let canvas = document.querySelector(".canvas")
+    let span = document.querySelector(".heading span")
+    let btn = document.querySelector(".heading button")
+
+
+    canvas.onmousemove = function (e) {
+      let x = e.offsetX
+      let y = e.offsetY
+      span.innerHTML = x + ", " + y
+
+      // console.log(x - 5, y - 15)
+
+
+
+    }
+    canvas.onclick = (e) => {
+      const div = document.createElement("div") //<div></div>
+      div.classList.add("dot")
+      // div.style.cssText = 'width: 10px; height: 10px; '
+      div.style.left = e.offsetX - Number(5) + "px"
+      div.style.top = e.offsetY - Number(5) + "px"
+      canvas.append(div)
+    }
+
+    btn.onclick = () => {
+      span.innerHTML = " "
+      canvas.innerHTML = " "
+    }
+
+
+
+
+
+    //What is an object?
+    //What is for.. in loop
+    //What is object.create, object.entries
+    //How to print object on screen
+    //How to print nested object on screen
+
+  </script>
+</body>
+
+</html>
