@@ -1,6 +1,10 @@
-function Sum(props) {
-    // console.log(props)
-  return props.num1 + props.num2;
+import React from 'react'
+import Counter from './Counter'
+
+function App() {
+  return (
+    <Counter />
+  )
 }
-//Example Comment
-export default Sum;
+
+export default App
