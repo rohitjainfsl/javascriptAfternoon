@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{text-decoration: none;}
+header{
+    display: flex;
+    background-color: #faa361;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 0 3rem;
+}
+header ul{
+    display: flex;
+    list-style-type: none;
+}
+header a{
+    display: inline-block;
+    padding: 0 0.5rem;
+    margin: 0 0.5rem;
+}
